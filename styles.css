@@ -1,0 +1,174 @@
+/* Reseteo */
+* {
+  font-family: "Cabin";
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #163461;
+  overflow: hidden;
+}
+
+/* Contenedor Principal */
+main {
+  display: flex;
+}
+
+/* Contenedor Imagen */
+
+.img-container {
+  position: relative;
+  height: 100vh;
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.degradado {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(
+    to left,
+    rgba(22, 52, 97, 1) 0%,
+    transparent 95%
+  );
+}
+
+.img-hinchada {
+  width: 100%;
+  height: 100%;
+  filter: blur(1px) hue-rotate(175deg) brightness(45%);
+}
+
+.img-nombre {
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  z-index: 4;
+  top: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-nombre img {
+  width: 230px;
+  height: auto;
+}
+
+.img-nombre h2 {
+  font-family: "Gurajada";
+  font-size: 5.5rem;
+  letter-spacing: 4px;
+  font-weight: 700;
+  margin-block: 10px;
+  text-align: center;
+  color: #ffcb08;
+  line-height: 60px;
+}
+
+/* Container Formulario */
+
+.form-container {
+  height: 100vh;
+  width: 60%;
+  padding: 25px 60px;
+  position: relative;
+  z-index: 5;
+  background-color: #163461;
+}
+
+.form-container h1 {
+  margin-block: 10px;
+  color: #f4d03f;
+  font-size: 3.2rem;
+}
+
+.form-container p {
+  font-size: 1.4rem;
+  color: #f4d03f;
+}
+
+fieldset {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
+  width: 80%;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  display: block;
+  width: 100%;
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 3px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  color: #f4d03f;
+  font-size: 1.1rem;
+  border-bottom: 1px solid rgba(244, 208, 63, 0.7);
+  border-radius: 5px;
+  padding: 5px; /* Añade relleno para dar espacio al texto */
+}
+
+label {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+form button {
+  width: 30%;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  background-color: #ffcb08;
+  font-weight: 900;
+  font-size: 1.5rem;
+  box-shadow: 2px 2px 2px rgba(244, 208, 63, 0.5);
+  color: #163461;
+  cursor: pointer;
+  border: none;
+}
+
+.form-container a {
+  color: #f4d03f;
+  font-size: 1.3rem;
+}
+
+#login {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #163461 inset;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #ffcb08;
+}
+
+input:focus {
+  border: 1px solid rgba(244, 208, 63, 0.7);
+  box-shadow: 1px 1px 2px rgba(244, 208, 63, 0.7);
+}
+
+span{
+    color:red;
+    font: 1rem;
+}
