@@ -20,15 +20,17 @@ main {
 }
 
 /* Contenedor Imagen */
-
 .img-container {
   position: relative;
+  background-image: url(assets/1200px-Hinchada_de_Rosario_Central_Bandera151.jpg);
   height: 100vh;
   width: 40%;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
+/* Degradado */
 .degradado {
   width: 100%;
   height: 100vh;
@@ -43,29 +45,24 @@ main {
   );
 }
 
-.img-hinchada {
-  width: 100%;
-  height: 100%;
-  filter: blur(1px) hue-rotate(175deg) brightness(45%);
-}
-
+/* Container imagen y titulo */
 .img-nombre {
   width: 100%;
   height: 60%;
-  position: absolute;
+  position: relative;
   z-index: 4;
-  top: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
+/* Imagen escudo */
 .img-nombre img {
-  width: 230px;
+  width: 220px;
   height: auto;
 }
 
+/* Titulo Rosario Central */
 .img-nombre h2 {
   font-family: "Gurajada";
   font-size: 5.5rem;
@@ -82,39 +79,45 @@ main {
 .form-container {
   height: 100vh;
   width: 60%;
-  padding: 25px 60px;
+  padding: 30px 60px;
   position: relative;
   z-index: 5;
   background-color: #163461;
 }
 
+/* Form titulo h1 */
 .form-container h1 {
   margin-block: 10px;
   color: #f4d03f;
-  font-size: 3.2rem;
+  font-size: 3rem;
 }
 
+/* Form parrafo */
 .form-container p {
-  font-size: 1.4rem;
+  font-size: 1.3rem;
   color: #f4d03f;
 }
 
-fieldset {
-  margin: 0;
-  margin-bottom: 30px;
-  padding: 0;
-  width: 80%;
-  border: none;
-  display: flex;
+/* Formulario, input container, input, label y button submit*/
+form{
+  width: 90%;
+  display:flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
+
+.input-container{
+  width: clamp(175px, 40%, 240px);
+  margin-top: 15px;
+}
+
 
 input {
   display: block;
   width: 100%;
-  height: 35px;
+  height: 30px;
   margin-top: 5px;
-  margin-bottom: 3px;
   background-color: transparent;
   outline: none;
   border: none;
@@ -122,17 +125,18 @@ input {
   font-size: 1.1rem;
   border-bottom: 1px solid rgba(244, 208, 63, 0.7);
   border-radius: 5px;
-  padding: 5px; /* Añade relleno para dar espacio al texto */
+  padding: 5px; 
 }
 
 label {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   color: rgba(255, 255, 255, 0.7);
 }
 
 form button {
   width: 30%;
   padding: 15px;
+  margin-top: 25px;
   margin-bottom: 15px;
   border-radius: 10px;
   background-color: #ffcb08;
@@ -144,15 +148,19 @@ form button {
   border: none;
 }
 
+/* Login */
 .form-container a {
   color: #f4d03f;
   font-size: 1.3rem;
 }
 
 #login {
+  display: inline-block;
+  margin: 0;
   color: rgba(255, 255, 255, 0.6);
 }
 
+/* Estilos especiales para input */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus {
@@ -168,7 +176,55 @@ input:focus {
   box-shadow: 1px 1px 2px rgba(244, 208, 63, 0.7);
 }
 
+/* Mensaje de error */
 span{
     color:red;
-    font: 1rem;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+div.modal{
+  position: absolute;
+  z-index: 12;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(3, 3, 3, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.contenido-modal{
+  width: clamp(330px, 30%, 400px);
+  height: 35%;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.contenido-modal p{
+  margin-top: 60px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.contenido-modal button{
+  position: absolute;
+  right: 10px;
+  display: block;
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  padding: 5px 12px;
+  cursor: pointer;
+  font-weight: 900;
+  font-size: 1.3rem;
+  font-family: sans-serif;
+}
+
+#aviso{
+  color:red;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
 }

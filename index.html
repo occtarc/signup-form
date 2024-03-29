@@ -10,21 +10,22 @@
       rel="stylesheet"
     />
     <link
-    href="https://fonts.googleapis.com/css2?family=Gurajada&display=swap"
-    rel="stylesheet"
-  />
+      href="https://fonts.googleapis.com/css2?family=Gurajada&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>Sign Up - Form</title>
   </head>
   <body>
+    <div class="modal">
+      <div class="contenido-modal">
+        <button>X</button>
+        <p>Formulario enviado correctamente</p>
+      </div>
+    </div>
     <main>
       <div class="img-container">
         <div class="degradado"></div>
-        <img
-          class="img-hinchada"
-          src="assets/1200px-Hinchada_de_Rosario_Central_Bandera151.jpg"
-          alt=""
-        />
         <div class="img-nombre">
           <h2>Rosario Central</h2>
           <img
@@ -36,40 +37,42 @@
       <div class="form-container">
         <h1>Formulario de registro</h1>
         <p>Registrate en la pagina del más grande de Argentina!</p>
-        <form action="" method="post" >
-          <fieldset id="datos-personales">
-            <div class="input-container">
+        <form action="f6da305d09661998e4f6eef6d73c914e" method="post" novalidate>
+          <div class="input-container">
             <label for="nombre">Nombre</label>
-            <input id="nombre" type="text" required pattern="^[a-zA-Z]+$"/>
-        </div>
-            <div class="input-container">
+            <input id="nombre" type="text" required pattern="^[a-zA-Z]+$" />
+            <span class="mensaje-error"></span>
+          </div>
+          <div class="input-container">
             <label for="apellido">Apellido</label>
-            <input id= "apellido" type="text" required pattern="^[a-zA-Z]+$"/>
-        </div>
-          </fieldset>
-          <fieldset id="datos-contacto">
-            <div class="input-container">
+            <input id="apellido" type="text" required pattern="^[a-zA-Z]+$" />
+            <span class="mensaje-error"></span>
+          </div>
+          <div class="input-container">
             <label for="email">Correo electronico</label>
             <input type="email" id="email" required />
-        </div>
-        <div class="input-container">
+            <span class="mensaje-error"></span>
+          </div>
+          <div class="input-container">
             <label for="telefono">Telefono</label>
             <input type="tel" id="telefono" required />
-        </div>
-          </fieldset>
-          <fieldset id="dato-contraseña">
-            <div class="input-container">
+            <span class="mensaje-error"></span>
+          </div>
+
+          <div class="input-container">
             <label for="contraseña">Contraseña</label>
-            <input id = "contraseña"type="password" required />
-        </div>
-        <div class="input-container">
+            <input id="contraseña" type="password" required minlength="8"/>
+            <span class="mensaje-error"></span>
+          </div>
+          <div class="input-container">
             <label for="confirmar-contra">Confirmar contraseña</label>
-            <input id="confirmar-contra" type="password" required />
-        </div>
-          </fieldset>
+            <input id="confirmar-contra" type="password" required minlength="8"/>
+            <span class="mensaje-error"></span>
+          </div>
           <button type="submit">Crear cuenta</button>
+          <p id="aviso"></p>
         </form>
-        <p id="login">Ya tienes una cuenta? <a href="#">  Ingresa!</a></p>
+        <p id="login">Ya tienes una cuenta? <a href="#"> Ingresa!</a></p>
       </div>
     </main>
     <script src="script.js"></script>
