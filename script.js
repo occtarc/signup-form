@@ -105,7 +105,19 @@ formulario.addEventListener("submit", (event) => {
         mensajeAviso.textContent = "*Debes ingresar datos vàlidos"
         return;
     }
-        mensajeFormEnviado.style.display = "flex";
+    mensajeFormEnviado.style.display = "flex";
+
+    fetch("https://formsubmit.co/ajax/occta.rc00@gmail.com", {
+        method : "POST",
+        body: new FormData(event.target)
+    })
+        .then(res => res.ok ? res.json() : Promise.reject(res))
+        .then(json => {
+            console.log(json);
+            resetearForm();
+        })
+        .catch(err => console.log(err))
+
+        
 })
 
-botonCerrarMensaje.addEventListener("click",resetearForm);

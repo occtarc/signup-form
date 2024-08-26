@@ -40,33 +40,33 @@
         <form action="f6da305d09661998e4f6eef6d73c914e" method="post" novalidate>
           <div class="input-container">
             <label for="nombre">Nombre</label>
-            <input id="nombre" type="text" required pattern="^[a-zA-Z]+$" />
+            <input id="nombre" name="nombre" type="text" required pattern="^[a-zA-Z]+$" />
             <span class="mensaje-error"></span>
           </div>
           <div class="input-container">
             <label for="apellido">Apellido</label>
-            <input id="apellido" type="text" required pattern="^[a-zA-Z]+$" />
+            <input id="apellido" name="apellido" type="text" required pattern="^[a-zA-Z]+$" />
             <span class="mensaje-error"></span>
           </div>
           <div class="input-container">
             <label for="email">Correo electronico</label>
-            <input type="email" id="email" required />
+            <input type="email" name="correo" id="email" required />
             <span class="mensaje-error"></span>
           </div>
           <div class="input-container">
             <label for="telefono">Telefono</label>
-            <input type="tel" id="telefono" required />
+            <input name="telefono" type="tel" id="telefono" required />
             <span class="mensaje-error"></span>
           </div>
 
           <div class="input-container">
             <label for="contraseña">Contraseña</label>
-            <input id="contraseña" type="password" required minlength="8"/>
+            <input id="contraseña" type="password" name="password" required minlength="8"/>
             <span class="mensaje-error"></span>
           </div>
           <div class="input-container">
             <label for="confirmar-contra">Confirmar contraseña</label>
-            <input id="confirmar-contra" type="password" required minlength="8"/>
+            <input id="confirmar-contra" type="password" name="confirm-password" required minlength="8"/>
             <span class="mensaje-error"></span>
           </div>
           <button type="submit">Crear cuenta</button>
